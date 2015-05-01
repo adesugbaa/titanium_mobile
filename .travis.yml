@@ -54,3 +54,6 @@ script:
   - npm install
   - npm test
   - ls dist
+  
+after_success:
+  curl --ftp-pasv -T dist/mobilesdk*osx.zip -u ftpuser@sphinxinteractive.com:Tester1234\! sftp://s96953.gridserver.com
